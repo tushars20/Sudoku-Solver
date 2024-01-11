@@ -1,121 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sudoku Solver</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-  </head>
-  <body>
-      <br>
-      <h1 style="text-align: center;">SUDOKU SOLVER</h1>
-      <div id="flex" class="d-flex p-2 bd-highlight">Enter the input in given couloums and click solve</div>
-      <section id="container">
-        <div id="B1" class="left cells" ><input id="r0c0" type="text"></div>
-        <div id="B1" class="cells" ><input id="r0c1" type="text" maxlength="1"></div>
-        <div id="B1" class="cells" ><input id="r0c2" type="text" maxlength="1"></div>
-        <div  class="cells" ><input id="r0c3" type="text" maxlength="1"></div>
-        <div class="cells" ><input id="r0c4" type="text" maxlength="1"></div>
-        <div class="cells" ><input id="r0c5" type="text" maxlength="1"></div>
-        <div id="B1" class="cells" ><input id="r0c6" type="text" maxlength="1"></div>
-        <div id="B1" class="cells" ><input id="r0c7" type="text" maxlength="1"></div>
-        <div id="B1" class="right cells" ><input id="r0c8" type="text" maxlength="1"></div>
-
-        <div id="B1" class="left cells" ><input id="r1c0" type="text" maxlength="1"></div>
-        <div id="B1" class="cells" ><input id="r1c1" type="text" maxlength="1"></div>
-        <div id="B1" class="cells" ><input id="r1c2" type="text" maxlength="1"></div>
-        <div class="cells" ><input id="r1c3" type="text" maxlength="1"></div>
-        <div class="cells" ><input id="r1c4" type="text" maxlength="1"></div>
-        <div class="cells" ><input id="r1c5" type="text" maxlength="1"></div>
-        <div id="B1" class="cells" ><input id="r1c6" type="text" maxlength="1"></div>
-        <div id="B1" class="cells" ><input id="r1c7" type="text" maxlength="1"></div>
-        <div id="B1" class="right cells" ><input id="r1c8" type="text" maxlength="1"></div> 
-
-        <div id="B1" class="left cells" ><input id="r2c0" type="text" maxlength="1"></div>
-        <div id="B1" class="cells" ><input id="r2c1" type="text" maxlength="1"></div>
-        <div id="B1" class="cells" ><input id="r2c2" type="text" maxlength="1"></div>
-        <div class="cells" ><input id="r2c3" type="text" maxlength="1"></div>
-        <div class="cells" ><input id="r2c4" type="text" maxlength="1"></div>
-        <div class="cells" ><input id="r2c5" type="text" maxlength="1"></div>
-        <div id="B1" class="cells" ><input id="r2c6" type="text" maxlength="1"></div>
-        <div id="B1" class="cells" ><input id="r2c7" type="text" maxlength="1"></div>
-        <div id="B1" class="right cells" ><input id="r2c8" type="text" maxlength="1"></div>
-
-        <div class="left cells" ><input id="r3c0" type="text" maxlength="1"></div>
-        <div class="cells" ><input id="r3c1" type="text" maxlength="1"></div>
-        <div class="cells" ><input id="r3c2" type="text" maxlength="1"></div>
-        <div id="B1" class="cells" ><input id="r3c3" type="text" maxlength="1"></div>
-        <div id="B1" class="cells" ><input id="r3c4" type="text" maxlength="1"></div>
-        <div id="B1" class="cells" ><input id="r3c5" type="text" maxlength="1"></div>
-        <div class="cells" ><input id="r3c6" type="text" maxlength="1"></div>
-        <div class="cells" ><input id="r3c7" type="text" maxlength="1"></div>
-        <div class="right cells" ><input id="r3c8" type="text" maxlength="1"></div>
-
-        <div class="left cells" ><input id="r4c0" type="text" maxlength="1"></div>
-        <div class="cells" ><input id="r4c1" type="text" maxlength="1"></div>
-        <div class="cells" ><input id="r4c2" type="text" maxlength="1"></div>
-        <div id="B1" class="cells" ><input id="r4c3" type="text" maxlength="1"></div>
-        <div id="B1" class="cells" ><input id="r4c4" type="text" maxlength="1"></div>
-        <div id="B1" class="cells" ><input id="r4c5" type="text" maxlength="1"></div>
-        <div class="cells" ><input id="r4c6" type="text" maxlength="1"></div>
-        <div class="cells" ><input id="r4c7" type="text" maxlength="1"></div>
-        <div class="right cells" ><input id="r4c8" type="text" maxlength="1"></div>
-
-        <div class="left cells" ><input id="r5c0" type="text" maxlength="1"></div>
-        <div class="cells" ><input id="r5c1" type="text" maxlength="1"></div>
-        <div class="cells" ><input id="r5c2" type="text" maxlength="1"></div>
-        <div id="B1" class="cells" ><input id="r5c3" type="text" maxlength="1"></div>
-        <div id="B1" class="cells" ><input id="r5c4" type="text" maxlength="1"></div>
-        <div id="B1" class="cells" ><input id="r5c5" type="text" maxlength="1"></div>
-        <div class="cells" ><input id="r5c6" type="text" maxlength="1"></div>
-        <div class="cells" ><input id="r5c7" type="text" maxlength="1"></div>
-        <div class="right cells" ><input id="r5c8" type="text" maxlength="1"></div>
-
-        <div id="B1" class="left cells" ><input id="r6c0" type="text" maxlength="1"></div>
-        <div id="B1" class="cells" ><input id="r6c1" type="text" maxlength="1"></div>
-        <div id="B1" class="cells" ><input id="r6c2" type="text" maxlength="1"></div>
-        <div class="cells" ><input id="r6c3" type="text" maxlength="1"></div>
-        <div class="cells" ><input id="r6c4" type="text" maxlength="1"></div>
-        <div class="cells" ><input id="r6c5" type="text" maxlength="1"></div>
-        <div id="B1" class="cells" ><input id="r6c6" type="text" maxlength="1"></div>
-        <div id="B1" class="cells" ><input id="r6c7" type="text" maxlength="1"></div>
-        <div id="B1" class="right cells" ><input id="r6c8" type="text" maxlength="1"></div>
-
-        <div id="B1" class="left cells" ><input id="r7c0" type="text" maxlength="1"></div>
-        <div id="B1" class="cells" ><input id="r7c1" type="text" maxlength="1"></div>
-        <div id="B1" class="cells" ><input id="r7c2" type="text" maxlength="1"></div>
-        <div class="cells" ><input id="r7c3" type="text" maxlength="1"></div>
-        <div class="cells" ><input id="r7c4" type="text" maxlength="1"></div>
-        <div class="cells" ><input id="r7c5" type="text" maxlength="1"></div>
-        <div id="B1" class="cells" ><input id="r7c6" type="text" maxlength="1"></div>
-        <div id="B1" class="cells" ><input id="r7c7" type="text" maxlength="1"></div>
-        <div id="B1" class="right cells" ><input id="r7c8" type="text" maxlength="1"></div>
-
-        <div id="B1" class="left cells" ><input id="r8c0" type="text" maxlength="1"></div>
-        <div id="B1" class="cells" ><input id="r8c1" type="text" maxlength="1"></div>
-        <div id="B1" class="cells" ><input id="r8c2" type="text" maxlength="1"></div>
-        <div class="cells" ><input id="r8c3" type="text" maxlength="1"></div>
-        <div class="cells" ><input id="r8c4" type="text" maxlength="1"></div>
-        <div class="cells" ><input id="r8c5" type="text" maxlength="1"></div>
-        <div id="B1" class="cells" ><input id="r8c6" type="text" maxlength="1"></div>
-        <div id="B1" class="cells" ><input id="r8c7" type="text" maxlength="1"></div>
-        <div id="B1" class="right cells" ><input id="r8c8" type="text" maxlength="1"></div>
-
-      </section>
-      <br>
-      <div class="contain">
-        <button id="solve" type="button" class="btn btn-outline-primary ">Solve</button>
-       <button id="reset" type="button" class="btn btn-outline-primary ">Reset</button>
-      </div>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <footer id="flex" style="color: grey ;" class="d-flex p-2 bd-highlight">Developed by Tushar Soni, Junior undergraduate at IIT Kanpur</footer>
-      <script src="index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <title>Love Quotient Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Love Quotient Calculator</h1>
+    <form id="lqForm">
+        <input type="number" id="frequencyOfCommunication" placeholder="Frequency of Communication"><br>
+        <input type="number" id="durationOfTrust" placeholder="Duration of Trust (months)"><br>
+        <input type="number" id="mutualActivitiesParticipation" placeholder="Mutual Activities Participation"><br>
+        <input type="number" id="conflictResolutionTime" placeholder="Conflict Resolution Time (hours)"><br>
+        <input type="number" id="sharedInterests" placeholder="Number of Shared Interests"><br>
+        <input type="number" id="supportActions" placeholder="Number of Support Actions per Week"><br>
+        <input type="number" id="physicalIntimacyFrequency" placeholder="Physical Intimacy Frequency per Week"><br>
+        <input type="number" id="qualityTimeTogether" placeholder="Quality Time Together (hours per week)"><br>
+        <input type="number" id="individualHappinessScore" placeholder="Individual Happiness Score (1-10)"><br>
+        <input type="number" id="empathyLevel" placeholder="Empathy Level (1-10)"><br>
+        <button type="button" onclick="calculateLQ()">Calculate LQ</button>
+    </form>
+    <div id="result"></div>
+    <script src="script.js"></script>
+</body>
 </html>
